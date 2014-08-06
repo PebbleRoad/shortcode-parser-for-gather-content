@@ -5,7 +5,7 @@ You can use shortcodes in Gather Content [http://www.gathercontent.com](http://w
 Shortcode parser is based on Wordpress Shortcodes API. More information on shortcodes : [http://codex.wordpress.org/Shortcode_API](http://codex.wordpress.org/Shortcode_API)
 
 
-## Steps
+## What it does
 
 1. Download all content from Gather Content and saves them as JSON file
 2. Prepare and clean the html
@@ -14,7 +14,9 @@ Shortcode parser is based on Wordpress Shortcodes API. More information on short
     3. Removes any inline styles
     4. Replace malformed quotes `“` to `"`
 3. Parse shortcodes using `do_shortcode` Wordpress Shortcodes API
-   
+
+## How to use it
+
 In terminal (or browser with a php server)
     
 ```
@@ -28,7 +30,7 @@ html2jade --bodyless --donotencode -t pages/html/body/*.html -o pages/jade/body/
 ```
 
 
-### Config
+### Configuration
 
 Open `config.php` to change Gather Content configuration
 
