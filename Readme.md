@@ -7,20 +7,20 @@ Shortcode parser is based on Wordpress Shortcodes API. More information on short
 
 ## What it does
 
-1. Download all content from Gather Content and saves them as JSON file
-2. Prepare and clean the html
-    1. Cleans the html by removing any tags that enclose shortcodes: [http://regex101.com/r/bP2aY2](http://regex101.com/r/bP2aY2)
+1. Downloads content from Gather Content and saves it as a JSON file
+2. Prepares and cleans the HTML
+    1. Cleans the HTML by removing any tags that enclose shortcodes: [http://regex101.com/r/bP2aY2](http://regex101.com/r/bP2aY2)
     2. Adds `table table--bordered` classes to all `<table>` markup
     3. Removes any inline styles
-    4. Replace malformed quotes `“` to `"`
-3. Parse shortcodes using `do_shortcode` Wordpress Shortcodes API
+    4. Replaces malformed quotes `“` to `"`
+3. Parses shortcodes using `do_shortcode` Wordpress Shortcodes API
 
 ## How to use it
 
 In terminal (or browser with a php server)
     
 ```
-php refresh.php; /* Downloads content from GC */
+php refresh.php; /* Download content from GC */
 
 php parse.php; /* Does what it says */
 
