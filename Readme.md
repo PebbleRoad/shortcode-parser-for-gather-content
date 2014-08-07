@@ -30,7 +30,7 @@ html2jade --bodyless --donotencode -t pages/html/body/*.html -o pages/jade/body/
 ```
 
 
-### Configuration
+## Configuration
 
 Open `config.php` to change Gather Content configuration
 
