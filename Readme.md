@@ -56,4 +56,4 @@ Open `config.php` to change Gather Content configuration
 
 ### License
 
-MIT
+[MIT](http://opensource.org/licenses/MIT)
