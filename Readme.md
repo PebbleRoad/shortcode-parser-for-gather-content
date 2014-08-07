@@ -2,7 +2,7 @@
 
 You can use shortcodes in Gather Content [http://www.gathercontent.com](http://www.gathercontent.com) to create interacive elements such as accordions and tabs. You can then use this parser to convert the shortcodes into HTML.
 
-Shortcode parser is based on Wordpress Shortcodes API. More information on shortcodes : [http://codex.wordpress.org/Shortcode_API](http://codex.wordpress.org/Shortcode_API)
+Shortcode parser is based on [Wordpress Shortcodes API](http://codex.wordpress.org/Shortcode_API).
 
 
 ## What it does
