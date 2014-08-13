@@ -36,17 +36,56 @@
     $data = $response;
         
     $obj = json_decode(json_encode($data));
-
+    
     $pages = $obj->pages;
+
+    $link_array = array();
 
     foreach($pages as $page){
 
         $config = json_decode(base64_decode($page->config));
-        
+
+        $title = $page->name;
 
         $id = $page->id;
-        
+
+        $parent_id = $page->parent_id;
+
+        $short_title = "";
+
         $content = json_encode($page);
+
+        
+        foreach($config as $c){
+
+            if($c->label == "Meta"){
+                foreach($c->elements as $ele){
+                    
+                    if($ele->label == "URL"){
+
+                        $segments = explode('/', $ele->value);
+                       
+                    }
+                    
+                }
+            }
+                        
+        }
+
+        /**
+         * Create a link table
+         */
+
+        if($segments){
+            $link_array[] = array(
+                    'id' => $id,
+                    'segments'=>json_encode($segments),
+                    'url' => array_pop($segments).'.html',
+                    'title'=>$title
+                );
+        }
+        
+        /* Save each page as individual json file */
 
         $file = fopen($path.'/'.$id.'.json', "w");
 
@@ -56,5 +95,11 @@
 
     };
     
-    echo 'refreshed';
+    /* Save the link table json file */
+
+    $linktable = fopen(dirname( __FILE__ ).'/linkmap.json', 'w');
+    fwrite($linktable, json_encode($link_array));
+    fclose($linktable);
+
+    echo "done";
 ?>
