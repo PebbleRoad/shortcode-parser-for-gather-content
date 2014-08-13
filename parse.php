@@ -59,7 +59,7 @@ function parseContent($content){
 
     /* Optional if you have a link table */
 
-    $content = replaceLinks($content);
+    //$content = replaceLinks($content);
     
 
     // Regex: http://regex101.com/r/bP2aY2
